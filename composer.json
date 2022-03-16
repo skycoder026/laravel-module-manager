@@ -1,0 +1,41 @@
+{
+    "name": "skycoder/laravel-module-manager",
+    "description": "Laravel module generate & manage package",
+    "homepage": "https://github.com/skycoder026/laravel-module-manager",
+    "license": "MIT",
+    "keywords": [
+        "module-manager",
+        "laravel-module-manager",
+        "laravel-module-generate",
+        "asmakash",
+        "akashcsem",
+        "skycoder"
+    ],
+    "authors": [
+        {
+            "name": "Skycoder",
+            "email": "akashcseuu026@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Skycoder\\Moduler\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Skycoder\\Moduler\\LaravelModuleManagerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "readme": "./readme.md",
+    "time": "2022-03-12T10:00:00+00:00",
+    "require": {
+        "php": "^7.2.5|^8.0"
+    }
+}
