@@ -3,6 +3,9 @@
 namespace Skycoder\Moduler;
 
 use Illuminate\Support\ServiceProvider;
+use Skycoder\Moduler\Commands\ModuleInstallCommand;
+use Skycoder\Moduler\Commands\ModuleServiceCommand;
+use Skycoder\Moduler\Commands\ModuleTraitCommand;
 
 class LaravelModuleManagerServiceProvider extends ServiceProvider
 {
@@ -13,7 +16,17 @@ class LaravelModuleManagerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+
+
+        // Register the command if we are using the application via the CLI
+        if ($this->app->runningInConsole()) {
+            
+            $this->commands([
+                ModuleInstallCommand::class,
+                ModuleTraitCommand::class,
+                ModuleServiceCommand::class,
+            ]);
+        }
     }
 
     /**

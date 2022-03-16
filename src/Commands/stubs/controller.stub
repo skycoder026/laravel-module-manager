@@ -1,0 +1,198 @@
+<?php
+
+#namespace
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+#use_model
+
+
+class #controller extends Controller
+{
+    private $service;
+
+    private $dir = '#viewRoot';
+
+
+    /*
+     |--------------------------------------------------------------------------
+     | CONSTRUCTOR
+     |--------------------------------------------------------------------------
+    */
+    public function __construct()
+    {
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     |--------------------------------------------------------------------------
+     | INDEX METHOD
+     |--------------------------------------------------------------------------
+    */
+    public function index(Request $request)
+    {
+        $data = [];
+
+        #index_code
+
+        return view($this->dir . 'index', $data);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     |--------------------------------------------------------------------------
+     | CREATE METHOD
+     |--------------------------------------------------------------------------
+    */
+    public function create(Request $request)
+    {
+        # code...
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     |--------------------------------------------------------------------------
+     | STORE METHOD
+     |--------------------------------------------------------------------------
+    */
+    public function store(Request $request)
+    {
+        # code...
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     |--------------------------------------------------------------------------
+     | SHOW METHOD
+     |--------------------------------------------------------------------------
+    */
+    public function show(Request $request, #resource)
+    {
+        #show_code
+
+        return view($this->dir . 'show', $data);
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     |--------------------------------------------------------------------------
+     | EDIT METHOD
+     |--------------------------------------------------------------------------
+    */
+    public function edit(Request $request, #resource)
+    {
+        #edit_code
+
+        return view($this->dir . 'edit', $data);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     |--------------------------------------------------------------------------
+     | UPDATE METHOD
+     |--------------------------------------------------------------------------
+    */
+    public function update(Request $request, #resource)
+    {
+        # code...
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+     |--------------------------------------------------------------------------
+     | DELETE/DESTORY METHOD
+     |--------------------------------------------------------------------------
+    */
+    public function destroy(Request $request, #resource)
+    {
+        
+        try {
+
+            $#modelName->delete();
+
+
+            return redirect()->back()->withMessage('Data Successfully Deleted!');
+
+        } catch (\Throwable $th) {
+            
+            return redirect()->back()->withError($th->getMessage());
+        }
+    }
+}

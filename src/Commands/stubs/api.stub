@@ -1,0 +1,21 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::group(['middleware' => 'auth:sanctum'], function () {
+
+    // HERE YOUR API ROUTES WHICH IS INSIDE AUTH [SANCTUM]
+});
+
+
+
+
+// HERE YOUR API ROUTES WHICH IS OUTSIDE AUTH
